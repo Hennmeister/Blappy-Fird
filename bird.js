@@ -7,17 +7,18 @@ class bird {
 	
 	display() {
 		fill(birdColor);
-	  strokeWeight(2);
+		strokeWeight(2);
 		ellipse(this.x, this.y, this.size, this.size);
 	}
 	
-	log () {
-		console.log(this.y);
+	detectCollision() {
+			if(this.y + this.size >= height){
+					this.y = height - this.size;
+			}
 	}
 	
 	update() {
-		push();
-		this.y += 1;
-		log();
+		this.y += 3;
+		this.detectCollision();
 	}
 };

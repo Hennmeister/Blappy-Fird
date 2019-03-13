@@ -11,6 +11,7 @@ function setup() {
 function draw() {
 	background(255);
 	b.display();
+	ground.display();
 	update();
 }
 
@@ -25,3 +26,4 @@ function keyPressed(){
 function mouseClicked(){
 	b.y -= 100;
 }
+
