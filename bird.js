@@ -1,7 +1,7 @@
 class bird {
 	constructor(y){
 		this.y = y;
-		this.size = 50;
+		this.size = 40;
 		this.x = width/7;
 		this.frameCounter;
 		this.yVel = 0;
