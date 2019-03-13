@@ -17,7 +17,7 @@ function setup() {
 }
 
 function draw() {
-	background(255);
+	background(204, 255, 255);
 	b.display();
 	ground.display();
 	for(var i =0; i<NUMBER_OF_PIPES; i++){
@@ -30,7 +30,7 @@ function update(){
 	b.update();
 	for(var i =0; i<NUMBER_OF_PIPES; i++){
 		pipes[i].move();
-		if(pipes[i].x < 0){
+		if(pipes[i].x < 0 - pipes[i].width){
 			pipes[i] = new pipe(width);
 		}
 	}

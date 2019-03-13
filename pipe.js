@@ -7,7 +7,7 @@ class pipe {
 	}
 	
 	display(){
-		strokeWeight(1);
+		strokeWeight(5);
 		fill(0,255,0);
 		rect(this.x, 0, this.width, this.gapY);
 		rect(this.x, this.gapY + this.gapSize, this.width, height - this.gapY + this.gapSize);
@@ -16,4 +16,6 @@ class pipe {
 	move(){
 		this.x -= 5;
 	}
+	
+	
 }
