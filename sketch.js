@@ -6,6 +6,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   b = new bird(30);
 	birdColor = color(255, 204, 0);
+	frameRate(120);
 }
 
 function draw() {
@@ -20,10 +21,10 @@ function update(){
 }
 
 function keyPressed(){
-	b.y -= 100;
+	b.frameCounter = frameCount;
 }
 
 function mouseClicked(){
-	b.y -= 100;
+	b.frameCounter = frameCount;
 }
 

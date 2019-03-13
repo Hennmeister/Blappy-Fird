@@ -2,13 +2,18 @@ class bird {
 	constructor(y){
 		this.y = y;
 		this.size = 50;
-		this.x = 50;	
+		this.x = 50;
+		this.frameCounter;
 	}
 	
 	display() {
 		fill(birdColor);
 		strokeWeight(2);
 		ellipse(this.x, this.y, this.size, this.size);
+	}
+	
+	fly() {
+		this.y-= 20;
 	}
 	
 	detectCollision() {
@@ -18,7 +23,10 @@ class bird {
 	}
 	
 	update() {
-		this.y += 3;
+		this.y += 5;
 		this.detectCollision();
+		if(frameCount - this.frameCounter < 10){
+			 this.fly();
+		}
 	}
 };
